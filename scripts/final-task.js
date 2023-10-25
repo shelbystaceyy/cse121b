@@ -22,30 +22,12 @@ const displayScripture = (scriptures) => {
     article.appendChild(img);
     templesElement.appendChild(article);
     })
-}
+};
 
 /* connecting the JSON file */
 const getScriptures = async () => {
-    const response = await fetch(json/scriptures.json)
+    const response = await fetch('https://raw.githubusercontent.com/shelbystaceyy/scriptures/main/scriptures.json')
         const data = await response.json();
         templesList.push(...data);
         displayTemples(data);
 };
-
-const fs = require('fs');
-
-// Read the JSON file
-fs.readFile('data.json', 'utf8', (err, data) => {
-    if (err) {
-        console.error('Error reading JSON file:', err);
-        return;
-    }
-    
-    // Parse the JSON data into a JavaScript object
-    const jsonData = JSON.parse(data);
-
-    // Access and use the JSON data
-    console.log('Name:', jsonData.name);
-    console.log('Age:', jsonData.age);
-    console.log('Email:', jsonData.email);
-});
