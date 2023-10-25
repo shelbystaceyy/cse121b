@@ -23,9 +23,11 @@
 }
 
 img {
-    position: absolute;
-    top: 25%;
-    left: 25%;
+    width: 500px;
+    padding-top: 10px;
+    position: relative;
+    top: 30%;
+    left: 30%;
 }
 
 h3 {
